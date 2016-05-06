@@ -1,0 +1,6 @@
+- @events.each do |event|
+  %ul
+    %li
+      %h3= event.title
+    %li= event.start_time.to_formatted_s(:short)
+    %li= event.end_time.to_formatted_s(:short)
