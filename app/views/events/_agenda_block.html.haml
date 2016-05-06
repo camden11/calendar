@@ -1,0 +1,7 @@
+.agenda-block
+  .agenda-title-section
+    %h3=event.title
+    %p=event.location
+  .agenda-time-section
+    %h4="#{event.start_time.strftime("%I:%M%p")} -"
+    %h4=event.end_time.strftime("%I:%M%p")

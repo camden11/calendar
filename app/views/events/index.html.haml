@@ -1,6 +1,4 @@
-- @events.each do |event|
-  %ul
-    %li
-      %h3= event.title
-    %li= event.start_time.to_formatted_s(:short)
-    %li= event.end_time.to_formatted_s(:short)
+.events-page#events-agenda
+  %h2 Agenda
+  - @events.each do |event|
+    = render partial: "agenda_block", locals: { event: event }
