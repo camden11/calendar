@@ -1,4 +1,4 @@
 .events-page#events-agenda
   %h2 Agenda
   - @events.each do |event|
-    = render partial: "agenda_block", locals: { event: event }
+    = react_component('Event', event)
