@@ -1,10 +1,7 @@
 class Event extends React.Component {
   render () {
-    debugger
-    // var parts = []
-    // for (var value of this.props) {
-    //   parts.append()
-    // }
+    endTime = moment(this.props.end_time).format("h:mm A")
+    startTime = moment(this.props.start_time).format("h:mm A")
     return (
       <div className='agenda-block'>
         <div className='agenda-title-section'>
@@ -12,7 +9,8 @@ class Event extends React.Component {
           <p>{this.props.location}</p>
         </div>
         <div className='agenda-time-section'>
-          <h4>{this.props.end_time}</h4>
+          <h4>{startTime}</h4>
+          <h4>{endTime}</h4>
         </div>
       </div>
     );
